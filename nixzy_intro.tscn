@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://cuy8033cjeaxs"]
+[gd_scene load_steps=20 format=3 uid="uid://cuy8033cjeaxs"]
 
 [ext_resource type="Script" path="res://nixzy_intro.gd" id="1_noupn"]
 [ext_resource type="Texture2D" uid="uid://bhpci1euip062" path="res://NixzyIntro-1.png.png" id="1_x3lh4"]
 [ext_resource type="Texture2D" uid="uid://c42erxt0qx6qm" path="res://HL_logo-.png" id="3_mdt54"]
 [ext_resource type="FontFile" uid="uid://bdk2ax0gf47wy" path="res://VCR_OSD_MONO_1.001.ttf" id="4_ia5he"]
+[ext_resource type="AudioStream" uid="uid://b2steyir73vk8" path="res://musics/TitleRollRain_-_Title_Roll_Rain.mp3" id="5_7yrqq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iik6q"]
 font = ExtResource("4_ia5he")
@@ -66,7 +67,7 @@ length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/path = NodePath("HighLevel:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +79,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/path = NodePath("Nixzy:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -87,13 +88,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GPUParticles2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 9.1, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.509804), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_6yyge"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/path = NodePath("HighLevel:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -105,10 +118,22 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/path = NodePath("Nixzy:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GPUParticles2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -136,7 +161,7 @@ offset_right = 960.0
 offset_bottom = 640.0
 color = Color(0, 0, 0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Nixzy" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -152,7 +177,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_x3lh4")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="HighLevel" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 5
@@ -164,12 +189,12 @@ offset_bottom = 666.0
 grow_horizontal = 2
 texture = ExtResource("3_mdt54")
 
-[node name="Label" type="Label" parent="TextureRect2"]
+[node name="Label" type="Label" parent="HighLevel"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 502.0
-offset_right = 346.0
-offset_bottom = 659.0
+offset_top = 448.0
+offset_right = 360.0
+offset_bottom = 605.0
 text = "HIGH LEVEL
 STUDIOS"
 label_settings = SubResource("LabelSettings_iik6q")
@@ -177,6 +202,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("CanvasItemMaterial_46lwp")
 amount = 1395
 process_material = SubResource("ParticleProcessMaterial_7n00x")
@@ -189,3 +215,8 @@ libraries = {
 "": SubResource("AnimationLibrary_waxh8")
 }
 autoplay = "NixzyIntro"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_7yrqq")
+volume_db = 24.0
+autoplay = true
