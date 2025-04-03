@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyas80oolqwj6"]
+
+[ext_resource type="Texture2D" uid="uid://de5hgqcmjx0yx" path="res://Sprites/MenuThings/SluCatMenu.png" id="1_dnif8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnif8"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p5oo"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddbet"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2js08"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh2ts"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3as8b"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(640, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afye8"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(0, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6kqq"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(320, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bivps"]
+atlas = ExtResource("1_dnif8")
+region = Rect2(640, 640, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_736yr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnif8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p5oo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddbet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2js08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh2ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3as8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afye8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6kqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bivps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_736yr")
+autoplay = "default"
+frame_progress = 0.206808

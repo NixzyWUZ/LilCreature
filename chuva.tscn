@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsu3hjiljanbm"]
+
+[sub_resource type="Gradient" id="Gradient_x1t4t"]
+offsets = PackedFloat32Array(0, 0.603774, 1)
+colors = PackedColorArray(0, 0.183105, 0.292969, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ddko5"]
+gradient = SubResource("Gradient_x1t4t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vtjvr"]
+emission_shape = 3
+emission_box_extents = Vector3(500, 10, 0)
+direction = Vector3(-1, 1, 0)
+spread = 25.0
+initial_velocity_max = 69.89
+gravity = Vector3(0, 100, 0)
+color_ramp = SubResource("GradientTexture1D_ddko5")
+
+[node name="chuva" type="GPUParticles2D"]
+scale = Vector2(7.23196, 7.36967)
+amount = 190
+process_material = SubResource("ParticleProcessMaterial_vtjvr")
+lifetime = 2.0
+speed_scale = 2.0
+visibility_rect = Rect2(0, 0, 133, 87)
+trail_lifetime = 0.01

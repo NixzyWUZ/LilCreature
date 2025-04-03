@@ -1,0 +1,191 @@
+[gd_scene load_steps=19 format=3 uid="uid://cuy8033cjeaxs"]
+
+[ext_resource type="Script" path="res://nixzy_intro.gd" id="1_noupn"]
+[ext_resource type="Texture2D" uid="uid://bhpci1euip062" path="res://NixzyIntro-1.png.png" id="1_x3lh4"]
+[ext_resource type="Texture2D" uid="uid://c42erxt0qx6qm" path="res://HL_logo-.png" id="3_mdt54"]
+[ext_resource type="FontFile" uid="uid://bdk2ax0gf47wy" path="res://VCR_OSD_MONO_1.001.ttf" id="4_ia5he"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iik6q"]
+font = ExtResource("4_ia5he")
+font_size = 56
+outline_size = 10
+outline_color = Color(0.34902, 0.105882, 0.596078, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_46lwp"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_2nbvg"]
+max_value = 0.3
+_data = [Vector2(0, 0.00659341), 0.0, 1.14031, 0, 0, Vector2(0.504717, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0.00989011), -1.14031, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_vc6qn"]
+curve = SubResource("Curve_2nbvg")
+
+[sub_resource type="Gradient" id="Gradient_hhhsh"]
+offsets = PackedFloat32Array(0, 0.483696, 0.907609)
+colors = PackedColorArray(0.917647, 0.917647, 0.917647, 1, 0.918777, 0.918777, 0.918777, 1, 0.076087, 0.076087, 0.076087, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w5nq1"]
+gradient = SubResource("Gradient_hhhsh")
+
+[sub_resource type="Curve" id="Curve_16gfc"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_iohx5"]
+max_value = 30.0
+_data = [Vector2(0, 17.4725), 0.0, 88.951, 0, 0, Vector2(0.254717, 30), 0.0, 0.0, 0, 0, Vector2(0.990566, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_w5lnn"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_d52yk"]
+curve_x = SubResource("Curve_16gfc")
+curve_y = SubResource("Curve_iohx5")
+curve_z = SubResource("Curve_w5lnn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7n00x"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(480, 0, 0)
+emission_shape = 3
+emission_box_extents = Vector3(480, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.2
+scale_over_velocity_curve = SubResource("CurveXYZTexture_d52yk")
+color_initial_ramp = SubResource("GradientTexture1D_w5nq1")
+alpha_curve = SubResource("CurveTexture_vc6qn")
+
+[sub_resource type="Animation" id="Animation_4d2lv"]
+resource_name = "NixzyIntro"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.5, 7.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6yyge"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_waxh8"]
+_data = {
+"NixzyIntro": SubResource("Animation_4d2lv"),
+"RESET": SubResource("Animation_6yyge")
+}
+
+[node name="NixzyIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_noupn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -123.0
+offset_right = 85.5
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x3lh4")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.5
+offset_right = 187.5
+offset_bottom = 666.0
+grow_horizontal = 2
+texture = ExtResource("3_mdt54")
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 502.0
+offset_right = 346.0
+offset_bottom = 659.0
+text = "HIGH LEVEL
+STUDIOS"
+label_settings = SubResource("LabelSettings_iik6q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_46lwp")
+amount = 1395
+process_material = SubResource("ParticleProcessMaterial_7n00x")
+lifetime = 0.7
+preprocess = 0.5
+visibility_rect = Rect2(0, 0, 960, 640)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_waxh8")
+}
+autoplay = "NixzyIntro"
