@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bdk2ax0gf47wy"
-path="res://.godot/imported/VCR_OSD_MONO_1.001.ttf-50d620f737329356d429da1ce93f3772.fontdata"
+uid="uid://cc8g6tor10edc"
+path="res://.godot/imported/rain-world-menu.ttf-c5b8a083d51f6603b700952fa551ed20.fontdata"
 
 [deps]
 
-source_file="res://VCR_OSD_MONO_1.001.ttf"
-dest_files=["res://.godot/imported/VCR_OSD_MONO_1.001.ttf-50d620f737329356d429da1ce93f3772.fontdata"]
+source_file="res://TextFonts/rain-world-menu.ttf"
+dest_files=["res://.godot/imported/rain-world-menu.ttf-c5b8a083d51f6603b700952fa551ed20.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

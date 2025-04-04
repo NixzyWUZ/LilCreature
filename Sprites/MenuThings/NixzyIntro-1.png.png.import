@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cykkf1k05deec"
-path="res://.godot/imported/CatSlugIDClimb.png-4821cb22da68c88550117788ae0ddeb2.ctex"
+uid="uid://bhpci1euip062"
+path="res://.godot/imported/NixzyIntro-1.png.png-b5bb87da93454d1e2feaf828e924132b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CatSlugIDClimb.png"
-dest_files=["res://.godot/imported/CatSlugIDClimb.png-4821cb22da68c88550117788ae0ddeb2.ctex"]
+source_file="res://Sprites/MenuThings/NixzyIntro-1.png.png"
+dest_files=["res://.godot/imported/NixzyIntro-1.png.png-b5bb87da93454d1e2feaf828e924132b.ctex"]
 
 [params]
 

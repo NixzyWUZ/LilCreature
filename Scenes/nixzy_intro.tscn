@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://cuy8033cjeaxs"]
 
-[ext_resource type="Script" path="res://nixzy_intro.gd" id="1_noupn"]
-[ext_resource type="Texture2D" uid="uid://bhpci1euip062" path="res://NixzyIntro-1.png.png" id="1_x3lh4"]
-[ext_resource type="Texture2D" uid="uid://c42erxt0qx6qm" path="res://HL_logo-.png" id="3_mdt54"]
-[ext_resource type="FontFile" uid="uid://bdk2ax0gf47wy" path="res://VCR_OSD_MONO_1.001.ttf" id="4_ia5he"]
-[ext_resource type="AudioStream" uid="uid://b2steyir73vk8" path="res://musics/TitleRollRain_-_Title_Roll_Rain.mp3" id="5_7yrqq"]
+[ext_resource type="Script" path="res://Scripts/nixzy_intro.gd" id="1_lonur"]
+[ext_resource type="Texture2D" uid="uid://bhpci1euip062" path="res://Sprites/MenuThings/NixzyIntro-1.png.png" id="2_0prd8"]
+[ext_resource type="Texture2D" uid="uid://c42erxt0qx6qm" path="res://Sprites/MenuThings/HL_logo-.png" id="3_nltqf"]
+[ext_resource type="FontFile" uid="uid://bdk2ax0gf47wy" path="res://TextFonts/VCR_OSD_MONO_1.001.ttf" id="4_44esy"]
+[ext_resource type="AudioStream" uid="uid://b2steyir73vk8" path="res://musics/TitleRollRain_-_Title_Roll_Rain.mp3" id="5_fimp2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iik6q"]
-font = ExtResource("4_ia5he")
+font = ExtResource("4_44esy")
 font_size = 56
 outline_size = 10
 outline_color = Color(0.34902, 0.105882, 0.596078, 1)
@@ -153,7 +153,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_noupn")
+script = ExtResource("1_lonur")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -175,7 +175,7 @@ offset_right = 85.5
 offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_x3lh4")
+texture = ExtResource("2_0prd8")
 
 [node name="HighLevel" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -187,7 +187,7 @@ offset_left = -187.5
 offset_right = 187.5
 offset_bottom = 666.0
 grow_horizontal = 2
-texture = ExtResource("3_mdt54")
+texture = ExtResource("3_nltqf")
 
 [node name="Label" type="Label" parent="HighLevel"]
 layout_mode = 0
@@ -217,6 +217,6 @@ libraries = {
 autoplay = "NixzyIntro"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_7yrqq")
+stream = ExtResource("5_fimp2")
 volume_db = 24.0
 autoplay = true

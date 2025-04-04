@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://sjmn63wvobs5"]
 
 [ext_resource type="VideoStream" path="res://NixzyIntro.ogv" id="1_lof6a"]
-[ext_resource type="Script" path="res://intro.gd" id="1_txerl"]
-[ext_resource type="Texture2D" uid="uid://cjjk1cjao17yh" path="res://NixzyIntro-1.png (1).png" id="2_oouv0"]
+[ext_resource type="Script" path="res://Scripts/intro.gd" id="1_txerl"]
+[ext_resource type="Texture2D" path="res://NixzyIntro-1.png (1).png" id="2_oouv0"]
 
 [sub_resource type="Animation" id="Animation_24hlf"]
 resource_name = "intro"

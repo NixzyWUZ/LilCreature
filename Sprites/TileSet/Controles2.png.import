@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhpci1euip062"
-path="res://.godot/imported/NixzyIntro-1.png.png-d81312e191bcaaffd606e56abc87adfe.ctex"
+uid="uid://ck4ivltthimo1"
+path="res://.godot/imported/Controles2.png-f6f347b48584c7946618348393e37cc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NixzyIntro-1.png.png"
-dest_files=["res://.godot/imported/NixzyIntro-1.png.png-d81312e191bcaaffd606e56abc87adfe.ctex"]
+source_file="res://Sprites/TileSet/Controles2.png"
+dest_files=["res://.godot/imported/Controles2.png-f6f347b48584c7946618348393e37cc1.ctex"]
 
 [params]
 

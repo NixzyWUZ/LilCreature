@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck4ivltthimo1"
-path="res://.godot/imported/Controles2.png-2fc86beb8bc6d3e2207e1755f82e611e.ctex"
+uid="uid://cykkf1k05deec"
+path="res://.godot/imported/CatSlugIDClimb.png-282c7067cfc20f6cc4b50a37da13f88b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Controles2.png"
-dest_files=["res://.godot/imported/Controles2.png-2fc86beb8bc6d3e2207e1755f82e611e.ctex"]
+source_file="res://Sprites/Animation/CatSlugIDClimb.png"
+dest_files=["res://.godot/imported/CatSlugIDClimb.png-282c7067cfc20f6cc4b50a37da13f88b.ctex"]
 
 [params]
 

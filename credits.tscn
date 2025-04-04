@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3io8l61p3pq7"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_yvk1k"]
+[ext_resource type="FontFile" uid="uid://cc8g6tor10edc" path="res://TextFonts/rain-world-menu.ttf" id="2_dir60"]
+[ext_resource type="Script" path="res://label.gd" id="3_7dg6n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ebyi"]
+font = ExtResource("2_dir60")
+font_size = 26
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvk1k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 281.0
+offset_top = 640.0
+offset_right = 713.0
+offset_bottom = 3357.0
+text = "==========CREDITS===========
+
+
+
+Director: Nixzy (Nicolas)
+
+
+
+
+Artist: Nixzy
+
+
+
+
+Used musics by: Rain WorldOST
+
+
+
+
+Noid > Me ajudou no sistema de
+escada para os \"postes\"
+
+
+
+
+Noid > Deu a ideia da ponte 
+quebrada
+
+
+
+Prof. Everton > me ajudou em 
+codes que não soube fazer e os
+com defeito
+
+
+
+Nesi (YT) > Com o tutorial de 
+parallax
+
+
+
+
+Single-Minded Ryan (YT) > Com
+tutorial de como fazer particulas
+de chuva (muito importante)
+
+
+
+Agradecimentos especiais:
+
+
+
+Rain World > por ser o jogo que
+mais me insipirei nesse jogo
+
+
+
+Noid por me ajudar em algumas
+necessidades.
+
+
+
+E por vc S2, por poder testar meu
+projeto.
+
+
+
+Sei q não é o tipo de jogo para
+sua dopamina se encher
+
+
+
+Mias ainda sim agradeço pelo 
+fato de pelo menos testar.
+
+
+
+Obrigado 
+-Nixzy
+
+"
+label_settings = SubResource("LabelSettings_4ebyi")
+script = ExtResource("3_7dg6n")

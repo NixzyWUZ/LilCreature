@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwuyflsu7svg"
-path="res://.godot/imported/Controles-1.png.png-9a44dd028d694c9d4f1d4974f757b092.ctex"
+uid="uid://bk8c7ewpypmij"
+path="res://.godot/imported/Cloud-1.png.png-8a1a5909fb09d9bde92bc487ea7ff082.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Controles-1.png.png"
-dest_files=["res://.godot/imported/Controles-1.png.png-9a44dd028d694c9d4f1d4974f757b092.ctex"]
+source_file="res://Cloud-1.png.png"
+dest_files=["res://.godot/imported/Cloud-1.png.png-8a1a5909fb09d9bde92bc487ea7ff082.ctex"]
 
 [params]
 
