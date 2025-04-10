@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://djqqpfo8v43u7"]
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://djqqpfo8v43u7"]
 
 [ext_resource type="Texture2D" uid="uid://djd1py1ywto50" path="res://Sprites/TileSet/TileSet3.png" id="1_n1r4q"]
 [ext_resource type="Texture2D" uid="uid://vy6fnamy8uoj" path="res://Sprites/TileSet/TileLadders.png" id="2_hm6xq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dparjmm75u5rl" path="res://Sprites/TileSet/TileSet23342-1.png.png" id="4_m606g"]
 [ext_resource type="Texture2D" uid="uid://cc4ipxttidrgf" path="res://Sprites/TileSet/watertile.png" id="5_0cvt8"]
 [ext_resource type="Texture2D" uid="uid://bywjrdcem8btg" path="res://Sprites/TileSet/TileMap624524.png" id="7_xlun7"]
+[ext_resource type="Texture2D" uid="uid://b4d7whdebfnrt" path="res://Sprites/TileSet/TileMap8634-1.png.png" id="8_vnp24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne3qu"]
 texture = ExtResource("1_n1r4q")
@@ -264,6 +265,24 @@ texture_region_size = Vector2i(32, 32)
 0:2/0 = 0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egiet"]
+texture = ExtResource("8_vnp24")
+texture_region_size = Vector2i(32, 32)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.33333, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.33333, 16, 5.33333, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -5.33333, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.85714, 16, 16, 16, 16, -16, 16)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.85714, 16, 6.85714, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
@@ -274,3 +293,4 @@ sources/5 = SubResource("TileSetAtlasSource_w4onn")
 sources/2 = SubResource("TileSetAtlasSource_o1uaj")
 sources/1 = SubResource("TileSetAtlasSource_1kmyu")
 sources/6 = SubResource("TileSetAtlasSource_wfsof")
+sources/7 = SubResource("TileSetAtlasSource_egiet")
